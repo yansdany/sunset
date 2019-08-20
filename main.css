@@ -1,0 +1,241 @@
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+h1{
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 120px;
+    font-weight: 100;
+    color: #fff;
+}
+
+h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 42px;
+    font-weight: 500;
+    color: #fff;
+}
+
+h3{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    color: #fff;
+}
+
+p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: #fff;
+}
+
+a{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    list-style: none;
+}
+
+.logo{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 42px;
+    font-weight: 100;
+    color: #fff;
+
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.logo:hover{
+    transform: scale(0.9);
+}
+
+::-webkit-scrollbar {
+    visibility: hidden;
+    width: 0;
+}
+
+/*----------------------------------------------------*/
+
+main{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
+}
+
+.home-container{
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+    position: relative;
+    overflow-y: scroll;
+}
+
+.main{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#clay-bgr-1,
+#clay-bgr-2,
+#clay-bgr-3,
+#clay-bgr-4{
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+}
+
+#clay-bgr-1{
+    background-image: url(images/clay_1.jpg);
+}
+
+#clay-bgr-2{
+    background-image: url(images/clay_2.jpg);
+}
+
+#clay-bgr-3{
+    background-image: url(images/clay_4.jpg);
+}
+
+#clay-bgr-4{
+    background-image: url(images/clay_5.jpg);
+}
+
+.nav{
+    position: fixed;
+    bottom: 200px;
+    left: -90px;
+    transform: rotate(-90deg);
+}
+
+.nav a{
+    display: inline;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.nav a.active{
+    margin-right: 170px;
+}
+
+.nav a.active::after{
+    content: "";
+    position: absolute; 
+    height: 2px;
+    width: 0;
+    background-color: #fff;
+    margin: 10px 0 0 15px;
+    transition: all .4s ease .4s;
+}
+
+.nav a.active::after{
+    width: 150px;
+    transition: all .2s ease;
+}
+
+.social{
+    display: flex;
+    flex-flow: column nowrap;
+    position: absolute;
+    right: 70px;
+    top: 50px;
+}
+
+.social img{
+    height: 40px;
+    margin-bottom: 40px;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.social img:hover{
+    transform: scale(0.9);
+}
+
+.description{
+    display: flex;
+    position: absolute;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+    right: -200px;
+    bottom: 100px;
+}
+
+.description h1{
+    margin-bottom: 100px;
+    width: 700px;
+}
+
+.description h1::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 150px;
+    background-color: #fff;
+    right: 0;
+    bottom: 150px;
+}
+
+.description h3{
+    width: 450px;
+}
+
+.menu{
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+    background-color: #242626;
+}
+
+.clay-1{
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    background-image: url(images/clay_3.jpg);
+    background-size: cover;
+}
+
+.clay-2{
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+    background-image: url(images/clay_6.jpg);
+    background-size: cover;
+}
+
+.more{
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    background-color: #999491;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.more:hover h2,
+.more:hover p{
+    transform: scale(0.9);
+}
+
+.more h2{
+    margin-bottom: 40px;
+    transition: 1s;
+}
+
+.more p{
+    transition: 1s;
+}
