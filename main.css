@@ -47,7 +47,7 @@ a{
 
     position: absolute;
     top: 50px;
-    left: 50px;
+    left: -185%;
     transition: 1s;
     cursor: pointer;
 }
@@ -76,13 +76,7 @@ main{
     grid-row: 1 / 4;
     position: relative;
     overflow-y: scroll;
-}
-
-.main{
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    display: none;
+    z-index: 1;
 }
 
 #clay-bgr-1,
@@ -142,6 +136,20 @@ main{
     transition: all .2s ease;
 }
 
+.menu{
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+    background-color: #242626;
+    position: relative;
+    z-index: 2;
+}
+
+.main{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
 .social{
     display: flex;
     flex-flow: column nowrap;
@@ -168,7 +176,7 @@ main{
     justify-content: flex-end;
     align-items: flex-end;
     text-align: right;
-    right: -200px;
+    left: -110%;
     bottom: 100px;
 }
 
@@ -189,12 +197,6 @@ main{
 
 .description h3{
     width: 450px;
-}
-
-.menu{
-    grid-column: 2 / 3;
-    grid-row: 1 / 4;
-    background-color: #242626;
 }
 
 .clay-1{
